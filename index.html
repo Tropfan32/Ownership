@@ -4,151 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Система безопасности</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: url('https://source.unsplash.com/1600x900/?security') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+            background: #e0e0e0;
+            color: #333;
             margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: url('https://source.unsplash.com/1600x900/?security,technology') no-repeat center center/cover;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 700;
+            padding: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         }
         .container {
-            max-width: 600px;
-            margin: auto;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+        h1, h2, h3 {
+            text-align: center;
+            color: #007BFF;
         }
         p {
-            font-size: 1.2em;
-            line-height: 1.5;
+            font-size: 1.3em;
+            line-height: 1.7;
+            text-align: justify;
         }
-        .hidden {
-            display: none;
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #7a5cc5;
+            color: white;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            font-size: 1.1em;
+            text-align: center;
         }
         button {
-            background: #007BFF;
+            display: block;
+            width: 100%;
+            background: #7a5cc5;
             color: white;
+            padding: 16px;
             border: none;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-size: 1.3em;
             cursor: pointer;
+            margin-top: 25px;
             transition: 0.3s;
         }
         button:hover {
-            background: #0056b3;
+            background: #5a3ea0;
         }
         input {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 12px;
+            margin: 12px 0;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
+            border-radius: 6px;
+            font-size: 1.1em;
         }
         a {
             color: #007BFF;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
         a:hover {
             text-decoration: underline;
         }
-        .language-switch {
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
+    <div class="header">Современные системы безопасности</div>
+    
     <div class="container">
-        <div class="language-switch">
-            <label>
-                <input type="checkbox" id="lang-toggle"> Қаз / Рус
-            </label>
-        </div>
-        <h1 id="title">Система безопасности — Ваша безопасность</h1>
-        <p id="description">Наша система безопасности — это надёжный способ защитить ваш дом или офис. Мы предлагаем современные решения с простым управлением и высокой эффективностью.</p>
-        <p id="advantages">Преимущества нашей системы:</p>
-        <ul style="text-align: left; margin-left: 20px;">
-            <li id="adv1">Быстрая установка</li>
-            <li id="adv2">Умный контроль через смартфон</li>
-            <li id="adv3">Качественное оборудование</li>
-            <li id="adv4">Гарантия безопасности 24/7</li>
+        <h1>Защити свой дом и офис</h1>
+        <p>Наши системы безопасности обеспечивают надежную защиту и удобное управление. Мы используем передовые технологии для предотвращения угроз и взломов, гарантируя вашему дому и офису максимальный уровень безопасности. Современные решения позволяют мгновенно реагировать на любые подозрительные действия, обеспечивая вам спокойствие и уверенность в каждой минуте.</p>
+        
+        <h2>Наши преимущества</h2>
+        <ul>
+            <li>Быстрая установка</li>
+            <li>Управление через смартфон</li>
+            <li>Высокое качество оборудования</li>
+            <li>Круглосуточная безопасность</li>
         </ul>
         
-        <button onclick="showOrderForm()" id="order-btn">Заказать товар</button>
+        <button onclick="showOrderForm()">Оформить заказ</button>
         
-        <div id="order-section" class="hidden">
-            <h2 id="order-title">Оформление заказа</h2>
+        <div id="order-section" style="display:none;">
+            <h2>Оформление заказа</h2>
             <input type="text" id="name" placeholder="Ваше имя" required>
             <input type="tel" id="phone" placeholder="Ваш телефон" required>
             <input type="text" id="address" placeholder="Адрес установки" required>
-            <button onclick="submitOrder()" id="submit-btn">Оформить заказ</button>
+            
+            <h3>Выберите тип датчика</h3>
+            <label>
+                <input type="radio" name="sensor" value="PIR"> PIR датчик
+            </label>
+            <label>
+                <input type="radio" name="sensor" value="Laser"> Лазерный датчик
+            </label>
+            
+            <button onclick="submitOrder()">Оформить заказ</button>
         </div>
         
-        <div id="payment-section" class="hidden">
-            <h3 id="payment-title">Ссылка для оплаты</h3>
+        <div id="payment-section" style="display:none;">
+            <h3>Ссылка для оплаты</h3>
             <p><a id="kaspi-link" href="https://kaspi.kz/" target="_blank">Оплатить через Kaspi</a></p>
         </div>
     </div>
     
     <script>
         function showOrderForm() {
-            document.getElementById("order-section").classList.remove("hidden");
+            document.getElementById("order-section").style.display = "block";
         }
         
         function submitOrder() {
             const name = document.getElementById("name").value;
             const phone = document.getElementById("phone").value;
             const address = document.getElementById("address").value;
+            const sensor = document.querySelector('input[name="sensor"]:checked')?.value;
             
-            if (name && phone && address) {
-                document.getElementById("order-section").classList.add("hidden");
-                document.getElementById("payment-section").classList.remove("hidden");
+            if (name && phone && address && sensor) {
+                document.getElementById("order-section").style.display = "none";
+                document.getElementById("payment-section").style.display = "block";
                 
-                // Отправка данных в Telegram Bot
                 const botToken = "7758820685:AAFOwcmV85ePy2jHci0BaFeF4_Fe5oZlYkA";
                 const chatId = "6620454832";
-                const message = `Новый заказ!%0AИмя: ${name}%0AТелефон: ${phone}%0AАдрес: ${address}`;
+                const message = `Новый заказ! Имя: ${name} Телефон: ${phone} Адрес: ${address} Датчик: ${sensor}`;
                 
-                fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${message}`)
-                    .then(response => response.json())
-                    .then(data => console.log("Сообщение отправлено в Telegram", data))
-                    .catch(error => console.error("Ошибка отправки в Telegram", error));
+                fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${message}`);
             } else {
                 alert("Пожалуйста, заполните все поля");
             }
         }
-
-        const langToggle = document.getElementById("lang-toggle");
-        langToggle.addEventListener("change", function() {
-            if (this.checked) {
-                document.getElementById("title").innerText = "Қауіпсіздік жүйесі — сіздің қауіпсіздігіңіз";
-                document.getElementById("description").innerText = "Біздің қауіпсіздік жүйеміз — сіздің үйіңіз бен кеңсеңізді қорғаудың сенімді жолы. Біз заманауи шешімдерді ұсынамыз.";
-                document.getElementById("advantages").innerText = "Жүйеміздің артықшылықтары:";
-                document.getElementById("adv1").innerText = "Жылдам орнату";
-                document.getElementById("adv2").innerText = "Смартфон арқылы ақылды бақылау";
-                document.getElementById("adv3").innerText = "Сапалы жабдық";
-                document.getElementById("adv4").innerText = "24/7 қауіпсіздік кепілдігі";
-                document.getElementById("order-btn").innerText = "Тауарға тапсырыс беру";
-                document.getElementById("order-title").innerText = "Тапсырыс беру";
-                document.getElementById("submit-btn").innerText = "Тапсырыс жасау";
-                document.getElementById("payment-title").innerText = "Төлем сілтемесі";
-            } else {
-                document.getElementById("title").innerText = "Система безопасности — Ваша безопасность";
-                document.getElementById("order-btn").innerText = "Заказать товар";
-                document.getElementById("order-title").innerText = "Оформление заказа";
-                document.getElementById("submit-btn").innerText = "Оформить заказ";
-                document.getElementById("payment-title").innerText = "Ссылка для оплаты";
-            }
-        });
     </script>
 </body>
 </html>
